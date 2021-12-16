@@ -67,12 +67,13 @@ namespace Infobyte
 					File.AppendAllText("SystemInfo.txt", Environment.NewLine+"  Total size of drive:"+d.TotalSize+" Bytes");
 				}
 				
-				Application.EnableVisualStyles();
-				Application.SetCompatibleTextRenderingDefault(false);
-				Application.Run(new Messagebox());
+
 				
 			}
-			
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+			Application.Run(new Messagebox());
+
 		}
 		static bool IsElevated
 		{
