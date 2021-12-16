@@ -3,13 +3,26 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Security.Principal;
-using System.Management;
+using System.Reflection;
 namespace Infobyte
 {
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
+			try
+			{
+				if (args[0] == "-v")
+				{
+					Console.WriteLine(Assembly.GetEntryAssembly().GetName().Version.ToString());
+					Environment.Exit(0);
+				}
+			}
+			catch (Exception)
+			{
+				//pass
+			}
+			
 			DateTime timeofstart = DateTime.UtcNow;
 			//TODO: Make Arg's
 			Console.WriteLine("Starting Diagnostics...");
