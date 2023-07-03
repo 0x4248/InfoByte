@@ -1,4 +1,4 @@
-﻿namespace Infobyte
+namespace Infobyte
 {
 	partial class MainWindow
 	{
